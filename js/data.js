@@ -1,6 +1,6 @@
 /**
  * OCPS Call Tree Data
- * Organized as a tree: root → category → sub-category → department result
+ * Organized as a tree: root â†’ category â†’ sub-category â†’ department result
  * Each node: { id, label, desc, icon, accent, iconBg, iconColor, children? | result? }
  */
 
@@ -10,9 +10,9 @@ const CALL_TREE = {
   subtitle: 'Select the category that best describes the caller\'s issue to route them to the correct OCPS department.',
   children: [
 
-    /* ══════════════════════════════════════
+    
        1. STUDENTS & ENROLLMENT
-    ══════════════════════════════════════ */
+
     {
       id: 'students',
       label: 'Students & Enrollment',
@@ -66,8 +66,9 @@ const CALL_TREE = {
                 icon: 'fa-clipboard-list',
                 description: 'The Student Enrollment office handles all new student registration for Orange County Public Schools, including in-boundary enrollment and required documentation.',
                 contacts: [
-                  { role: 'Direct Line', info: '407-317-3251', type: 'phone' },
-                  { role: 'Website', info: 'ocps.net/student-enrollment-home', type: 'link', url: 'https://www.ocps.net/student-enrollment-home' }
+                  { role: 'Main Line', info: '407-317-3233', type: 'phone' },
+                  { role: 'Email', info: ' studentenrollment@ocps.net', type: 'email' },
+                  { role: 'Website', info: 'ocps.net/student-enrollment', type: 'link', url: 'https://www.ocps.net/student-enrollment' }
                 ],
                 tags: ['Enrollment', 'Registration', 'New Student', 'Documents'],
                 relatedDepts: ['School Choice Services', 'Records and Forms Management']
@@ -86,8 +87,8 @@ const CALL_TREE = {
                 icon: 'fa-map-marked-alt',
                 description: 'School Choice Services manages applications and placements for magnet schools, charter schools, virtual education options, and open enrollment transfers within OCPS.',
                 contacts: [
-                  { role: 'Direct Line', info: '407-317-3232', type: 'phone' },
-                  { role: 'Website', info: 'ocps.net/school-choice-home', type: 'link', url: 'https://www.ocps.net/school-choice-home' }
+                  { role: 'Main Line', info: '(407) 317-3233', type: 'phone' },
+                  { role: 'Website', info: 'ocps.net/school-choice', type: 'link', url: 'https://www.ocps.net/school-choice' }
                 ],
                 tags: ['Magnet', 'Charter', 'Transfer', 'Open Enrollment'],
                 relatedDepts: ['Student Enrollment', 'Assessment']
@@ -108,7 +109,9 @@ const CALL_TREE = {
             icon: 'fa-folder-open',
             description: 'Records and Forms Management handles student records requests, transcript releases, records retention, and official district form management.',
             contacts: [
-              { role: 'Direct Line', info: '407-317-3282', type: 'phone' },
+              { role: 'Main Line', info: '407.317.3965', type: 'phone' },
+              { role: 'Fax', info: '407.317.3703', type: 'fax' },
+              { role: 'Email', info: 'records@ocps.net', type: 'email' },
               { role: 'Website', info: 'ocps.net/records-and-forms', type: 'link', url: 'https://www.ocps.net/records-and-forms-management' }
             ],
             tags: ['Transcripts', 'Records', 'Forms', 'FERPA'],
@@ -128,7 +131,7 @@ const CALL_TREE = {
             icon: 'fa-heart',
             description: 'Student Services provides comprehensive supports including school counseling, mental and behavioral health resources, dropout prevention, and student wellness programs.',
             contacts: [
-              { role: 'Direct Line', info: '407-317-3378', type: 'phone' },
+              { role: 'Main Line', info: '407-317-3394', type: 'phone' },
               { role: 'Website', info: 'ocps.net/student-services', type: 'link', url: 'https://www.ocps.net/student-services' }
             ],
             tags: ['Counseling', 'Mental Health', 'Wellness', 'Support'],
@@ -148,7 +151,7 @@ const CALL_TREE = {
             icon: 'fa-house-damage',
             description: 'Homeless Education ensures students experiencing homelessness receive the same educational opportunities as other students, in compliance with the McKinney-Vento Homeless Assistance Act.',
             contacts: [
-              { role: 'Direct Line', info: '407-317-3200 Ext. 2008089', type: 'phone' },
+              { role: 'Main Line', info: '407-317-3200', type: 'phone' },
               { role: 'Website', info: 'ocps.net/homeless-education', type: 'link', url: 'https://www.ocps.net/homeless-education' }
             ],
             tags: ['McKinney-Vento', 'Housing Instability', 'Homeless', 'Displaced'],
@@ -168,7 +171,7 @@ const CALL_TREE = {
             icon: 'fa-globe-americas',
             description: 'Migrant Education provides academic and support services to students who qualify under the federal Migrant Education Program due to migratory agricultural or fishing work.',
             contacts: [
-              { role: 'Direct Line', info: '407-317-3200 Ext. 2028005', type: 'phone' },
+              { role: 'Main Line', info: '407-317-3485', type: 'phone' },
               { role: 'Website', info: 'ocps.net/migrant-education', type: 'link', url: 'https://www.ocps.net/migrant-education' }
             ],
             tags: ['Migrant', 'Federal Program', 'Agricultural', 'Support'],
@@ -178,9 +181,9 @@ const CALL_TREE = {
       ]
     },
 
-    /* ══════════════════════════════════════
+   
        2. SPECIAL POPULATIONS
-    ══════════════════════════════════════ */
+
     {
       id: 'special-populations',
       label: 'Special Populations & Language',
@@ -225,8 +228,8 @@ const CALL_TREE = {
             icon: 'fa-universal-access',
             description: 'Exceptional Student Education (ESE) provides services and programs to students with disabilities, including IEP development, specialized instruction, and compliance with IDEA and Section 504.',
             contacts: [
-              { role: 'Direct Line', info: '407-897-6420', type: 'phone' },
-              { role: 'ESE Department Page', info: 'ocps.net/exceptional-student-education-home', type: 'link', url: 'https://www.ocps.net/exceptional-student-education-home' }
+              { role: 'Main Line', info: '407-897-6420', type: 'phone' },
+              { role: 'ESE Parent Support', info: 'https://www.ocps.net/exceptional-student-education-home', type: 'link', url: 'https://www.ocps.net/exceptional-student-education-home' }
             ],
             tags: ['IEP', 'Disability', 'IDEA', 'Section 504', 'Special Education'],
             relatedDepts: ['Student Services', 'Access and Opportunity', 'Health Services']
@@ -254,8 +257,8 @@ const CALL_TREE = {
                 icon: 'fa-language',
                 description: 'Multilingual Services oversees English for Speakers of Other Languages (ESOL) programs, language assessments, and support for English Language Learners (ELLs) across OCPS.',
                 contacts: [
-                  { role: 'Main Line', info: '407-317-3200', type: 'phone' },
-                  { role: 'Website', info: 'ocps.net/multilingual', type: 'link', url: 'https://www.ocps.net/multilingual-services' }
+                  { role: 'Main Line', info: '407-317-3410', type: 'phone' },
+                  { role: 'Website', info: 'https://www.ocps.net/multilingual-services-home', type: 'link', url: 'https://www.ocps.net/multilingual-services' }
                 ],
                 tags: ['ESOL', 'ELL', 'Language Support', 'Bilingual', 'Translation'],
                 relatedDepts: ['Family Engagement and Digital Outreach', 'Migrant Education']
@@ -270,13 +273,13 @@ const CALL_TREE = {
               iconBg: '#ecfeff',
               iconColor: '#0891b2',
               result: {
-                department: 'Multilingual Services — Translation & Family Support',
+                department: 'Multilingual Services â€” Translation & Family Support',
                 icon: 'fa-comments',
                 description: 'The Multilingual Services department provides translation of key documents and has bilingual parent engagement liaisons to assist families whose primary language is not English.',
                 contacts: [
-                  { role: 'Translation Sr. Specialist', info: 'Jessica Vega — Ext. 2028011', type: 'person' },
-                  { role: 'Global Family Sr. Manager', info: 'Janine Gonzalez — Ext. 2028009', type: 'person' },
-                  { role: 'Bilingual Counselor', info: 'Wanda Alicea — Ext. 2028112', type: 'person' }
+                  { role: 'Translation Sr. Specialist', info: 'Jessica Vega â€” Ext. 2028011', type: 'person' },
+                  { role: 'Global Family Sr. Manager', info: 'Janine Gonzalez â€” Ext. 2028009', type: 'person' },
+                  { role: 'Bilingual Counselor', info: 'Wanda Alicea â€” Ext. 2028112', type: 'person' }
                 ],
                 tags: ['Translation', 'Bilingual', 'Family', 'Language'],
                 relatedDepts: ['Family Engagement and Digital Outreach', 'Community Outreach']
@@ -297,8 +300,9 @@ const CALL_TREE = {
             icon: 'fa-baby',
             description: 'The Early Childhood Program administers Voluntary Pre-Kindergarten (VPK) and other early learning programs, ensuring young children are school-ready before entering kindergarten.',
             contacts: [
-              { role: 'Main Line', info: '407-317-3200', type: 'phone' },
-              { role: 'Website', info: 'ocps.net/early-childhood', type: 'link', url: 'https://www.ocps.net/early-childhood-program' }
+              { role: 'Senior Admin', info: '407-317-3200 Ext. 200-4611', type: 'phone' },
+              { role: 'Program Coordinator', info: '407-317-3200 Ext. 635-2263', type: 'phone' },
+              { role: 'Website', info: 'ocps.net/early-childhood', type: 'link', url: 'ocps.net/early-childhood' }
             ],
             tags: ['VPK', 'Pre-K', 'Early Learning', 'Kindergarten Readiness'],
             relatedDepts: ['Student Enrollment', 'Exceptional Student Education']
@@ -317,8 +321,8 @@ const CALL_TREE = {
             icon: 'fa-balance-scale',
             description: 'Access and Opportunity works to eliminate barriers and ensure equitable access to high-quality education for all OCPS students, regardless of background.',
             contacts: [
-              { role: 'Main Line', info: '407-317-3200', type: 'phone' },
-              { role: 'Website', info: 'ocps.net/access-opportunity', type: 'link', url: 'https://www.ocps.net/access-and-opportunity' }
+              { role: 'Main Line', info: '407-317-3200 x 2003470', type: 'phone' },
+              { role: 'Website', info: 'https://www.ocps.net/accessopportunity', type: 'link', url: 'https://www.ocps.net/accessopportunity' }
             ],
             tags: ['Equity', 'Access', 'Diversity', 'Opportunity'],
             relatedDepts: ['Exceptional Student Education', 'Student Services', 'Community Outreach']
@@ -327,9 +331,7 @@ const CALL_TREE = {
       ]
     },
 
-    /* ══════════════════════════════════════
        3. ACADEMICS & CURRICULUM
-    ══════════════════════════════════════ */
     {
       id: 'academics',
       label: 'Academics & Curriculum',
@@ -347,7 +349,7 @@ const CALL_TREE = {
         {
           label: 'Testing & State Assessments',
           desc: 'FSA, FAST, EOCs, and standardized testing information',
-          url: 'https://www.ocps.net/assessment-home'
+          url: 'https://www.ocps.net/assessment'
         },
         {
           label: 'Career & Technical Education (CTE)',
@@ -379,8 +381,8 @@ const CALL_TREE = {
             icon: 'fa-book',
             description: 'Curriculum and Digital Learning oversees the development and implementation of standards-aligned curriculum, instructional materials, and digital learning tools across all grade levels.',
             contacts: [
-              { role: 'Direct Line', info: '407-317-3200 Ext. 2004001', type: 'phone' },
-              { role: 'Website', info: 'ocps.net/curriculum', type: 'link', url: 'https://www.ocps.net/curriculum-and-digital-learning' }
+              { role: 'Main Line', info: '407-317-3318', type: 'phone' },
+              { role: 'Website', info: 'ocps.net/curriculum', type: 'link', url: 'https://www.ocps.net/curriculum-and-digital-learning-hom' }
             ],
             tags: ['Curriculum', 'Instruction', 'Standards', 'Digital Learning', 'Textbooks'],
             relatedDepts: ['Assessment', 'Information Technology Services', 'Research']
@@ -399,8 +401,8 @@ const CALL_TREE = {
             icon: 'fa-tasks',
             description: 'The Assessment department manages district and state assessments, including FSA/FAST, EOCs, and other standardized testing for OCPS students.',
             contacts: [
-              { role: 'Direct Line', info: '407-317-3406', type: 'phone' },
-              { role: 'Website', info: 'ocps.net/assessment-home', type: 'link', url: 'https://www.ocps.net/assessment-home' }
+              { role: 'Main Line', info: '407.317.3406', type: 'phone' },
+              { role: 'Website', info: 'ocps.net/assessment', type: 'link', url: 'https://www.ocps.net/assessment' }
             ],
             tags: ['FSA', 'FAST', 'Standardized Testing', 'EOC', 'State Tests'],
             relatedDepts: ['Accountability', 'Research, Measurement and Strategy', 'Curriculum and Digital Learning']
@@ -419,7 +421,7 @@ const CALL_TREE = {
             icon: 'fa-hard-hat',
             description: 'Career and Technical Education (CTE) prepares students for college and careers through industry-specific courses and programs in areas such as technology, health sciences, business, and trades.',
             contacts: [
-              { role: 'Main Line', info: '407-317-3200', type: 'phone' },
+              { role: 'Main Line', info: '407-317-3200 EXT 200.3212', type: 'phone' },
               { role: 'Website', info: 'ocps.net/cte', type: 'link', url: 'https://www.ocps.net/career-and-technical-education' }
             ],
             tags: ['CTE', 'Vocational', 'Career', 'Workforce', 'Trades'],
@@ -439,8 +441,8 @@ const CALL_TREE = {
             icon: 'fa-running',
             description: 'The Athletics department oversees all OCPS interscholastic sports programs, athletic eligibility, scheduling, and extracurricular athletic activities.',
             contacts: [
-              { role: 'Main Line', info: '407-317-3200', type: 'phone' },
-              { role: 'Website', info: 'ocps.net/athletics', type: 'link', url: 'https://www.ocps.net/athletics' }
+              { role: 'Main Line', info: '407-317-3480', type: 'phone' },
+              { role: 'Website', info: 'ocps.net/athletics', type: 'link', url: 'https://ocpsathletics.net/' }
             ],
             tags: ['Sports', 'Athletics', 'Eligibility', 'Extracurricular'],
             relatedDepts: ['Student Services', 'School Board Services']
@@ -468,7 +470,7 @@ const CALL_TREE = {
                 icon: 'fa-chart-bar',
                 description: 'Accountability manages school and district performance reporting, including school grades, progress monitoring, and federal accountability requirements.',
                 contacts: [
-                  { role: 'Main Line', info: '407-317-3200', type: 'phone' },
+                  { role: 'Main Line', info: '407-317-3210', type: 'phone' },
                   { role: 'Website', info: 'ocps.net/accountability', type: 'link', url: 'https://www.ocps.net/accountability' }
                 ],
                 tags: ['School Grades', 'Performance', 'Accountability', 'Reporting'],
@@ -488,8 +490,8 @@ const CALL_TREE = {
                 icon: 'fa-chart-line',
                 description: 'The School Transformation Office and Strategic Improvement department provide targeted support to schools that need improvement, focusing on academic turnaround strategies.',
                 contacts: [
-                  { role: 'Main Line', info: '407-317-3200', type: 'phone' },
-                  { role: 'Website', info: 'ocps.net/strategic-improvement', type: 'link', url: 'https://www.ocps.net/strategic-improvement' }
+                  { role: 'Main Line', info: '407.317.3210', type: 'phone' },
+                  { role: 'Website', info: 'ocps.net/strategic-improvement', type: 'link', url: 'https://www.ocps.net/132248_3' }
                 ],
                 tags: ['School Improvement', 'Turnaround', 'Transformation', 'SIP'],
                 relatedDepts: ['Accountability', 'Research, Measurement and Strategy', 'Leadership Development']
@@ -500,9 +502,7 @@ const CALL_TREE = {
       ]
     },
 
-    /* ══════════════════════════════════════
        4. HEALTH & SAFETY
-    ══════════════════════════════════════ */
     {
       id: 'health-safety',
       label: 'Health, Safety & Security',
@@ -561,9 +561,9 @@ const CALL_TREE = {
                 icon: 'fa-user-shield',
                 description: 'OCPS District Police provides law enforcement services to the school district, handles emergencies, investigates criminal activity on school grounds, and supports school safety.',
                 contacts: [
-                  { role: 'Chief of District Police', info: 'Bryan Holmes — bryan.holmes@ocps.net', type: 'person' },
-                  { role: 'Deputy Chief', info: 'David Rinehart — David.Rinehart@ocps.net', type: 'person' },
-                  { role: 'Police Communications', info: 'Kim Harrell — Kimberly.Harrell@ocps.net', type: 'person' }
+                  { role: 'Chief of District Police', info: 'Bryan Holmes â€” bryan.holmes@ocps.net', type: 'person' },
+                  { role: 'Deputy Chief', info: 'David Rinehart â€” David.Rinehart@ocps.net', type: 'person' },
+                  { role: 'Police Communications', info: 'Kim Harrell â€” Kimberly.Harrell@ocps.net', type: 'person' }
                 ],
                 tags: ['Police', 'Safety', 'Emergency', 'Law Enforcement', 'Threat'],
                 relatedDepts: ['Safety and Emergency Management', 'Risk Management']
@@ -582,9 +582,9 @@ const CALL_TREE = {
                 icon: 'fa-exclamation-triangle',
                 description: 'Safety and Emergency Management develops and coordinates district-wide emergency plans, safety drills, crisis protocols, and environmental safety compliance.',
                 contacts: [
-                  { role: 'School Safety & Security', info: 'Angela Zambaux — Angela.Zambaux@ocps.net', type: 'person' },
-                  { role: 'School Safety & Security', info: 'Murray Daniel — frederick.daniel@ocps.net', type: 'person' },
-                  { role: 'Threat Management', info: 'Calvin Massiah — Calvin.Massiah@ocps.net', type: 'person' }
+                  { role: 'School Safety & Security', info: 'Angela Zambaux â€” Angela.Zambaux@ocps.net', type: 'person' },
+                  { role: 'School Safety & Security', info: 'Murray Daniel â€” frederick.daniel@ocps.net', type: 'person' },
+                  { role: 'Threat Management', info: 'Calvin Massiah â€” Calvin.Massiah@ocps.net', type: 'person' }
                 ],
                 tags: ['Emergency', 'Drills', 'Safety Plans', 'Crisis', 'Protocols'],
                 relatedDepts: ['District Police', 'Risk Management', 'Environmental Compliance & Sustainability']
@@ -605,8 +605,8 @@ const CALL_TREE = {
             icon: 'fa-medkit',
             description: 'School Health Services oversees the school nursing program, manages student health records, medication administration, immunization requirements, and health-related accommodations.',
             contacts: [
-              { role: 'Main Line', info: '407-317-3200', type: 'phone' },
-              { role: 'Website', info: 'ocps.net/health-services', type: 'link', url: 'https://www.ocps.net/school-health-services' }
+              { role: 'Main Line', info: '407.317.3391', type: 'phone' },
+              { role: 'Website', info: 'ocps.net/health-services', type: 'link', url: 'https://www.ocps.net/health-services-home' }
             ],
             tags: ['Nurse', 'Medication', 'Immunization', 'Health Records', '504 Health'],
             relatedDepts: ['Exceptional Student Education', 'Student Services', 'Risk Management']
@@ -625,8 +625,8 @@ const CALL_TREE = {
             icon: 'fa-leaf',
             description: 'Environmental Compliance & Sustainability manages the district\'s environmental compliance programs, sustainability initiatives, and ensures school facilities meet environmental health standards.',
             contacts: [
-              { role: 'Main Line', info: '407-317-3200', type: 'phone' },
-              { role: 'Website', info: 'ocps.net/environmental-compliance', type: 'link', url: 'https://www.ocps.net/environmental-compliance-sustainability' }
+              { role: 'Main Line', info: '407-317-3700 Ext. 202 3970', type: 'phone' },
+              { role: 'Website', info: 'ocps.net/environmental-compliance', type: 'link', url: 'https://www.ocps.net/environmental-compliance-sustaina-2' }
             ],
             tags: ['Environment', 'Sustainability', 'Compliance', 'Facilities'],
             relatedDepts: ['Safety and Emergency Management', 'Facilities', 'Risk Management']
@@ -645,7 +645,8 @@ const CALL_TREE = {
             icon: 'fa-umbrella',
             description: 'Risk Management administers the district\'s insurance programs, workers\' compensation, liability claims, loss prevention, and risk assessment services.',
             contacts: [
-              { role: 'Main Line', info: '407-317-3200', type: 'phone' },
+              { role: 'Main Line', info: '407-317-3296', type: 'phone' },
+              { role: 'Fax', info: '407-317-3359', type: 'Fax' },
               { role: 'Website', info: 'ocps.net/risk-management', type: 'link', url: 'https://www.ocps.net/risk-management' }
             ],
             tags: ['Insurance', 'Liability', 'Workers Comp', 'Claims'],
@@ -655,9 +656,7 @@ const CALL_TREE = {
       ]
     },
 
-    /* ══════════════════════════════════════
        5. HUMAN RESOURCES & EMPLOYMENT
-    ══════════════════════════════════════ */
     {
       id: 'hr-employment',
       label: 'Human Resources & Employment',
@@ -707,7 +706,7 @@ const CALL_TREE = {
             icon: 'fa-id-badge',
             description: 'Human Resources manages employee benefits, personnel records, HR policies, leave administration, and general workforce services for all OCPS employees.',
             contacts: [
-              { role: 'Main Line', info: '407-317-3200', type: 'phone' },
+              { role: 'Main Line', info: 'see website', type: 'text' },
               { role: 'Website', info: 'ocps.net/hr', type: 'link', url: 'https://www.ocps.net/human-resources' }
             ],
             tags: ['Benefits', 'HR', 'Personnel', 'Leave', 'Policies'],
@@ -727,7 +726,9 @@ const CALL_TREE = {
             icon: 'fa-user-plus',
             description: 'Recruitment and Evaluation manages the hiring process for all OCPS positions, including teacher recruitment, job postings, applicant screening, and employee performance evaluations.',
             contacts: [
-              { role: 'Main Line', info: '407-317-3200', type: 'phone' },
+              { role: 'Main Line', info: '407-317-3200 Ext 2004592', type: 'phone' },
+              { role: 'Eval Email', info: 'EvaluationSystems@ocps.net', type: 'email' },
+              { role: 'Recruitment Email', info: 'Recruitment@ocps.net', type: 'email' },
               { role: 'Website', info: 'ocps.net/recruitment', type: 'link', url: 'https://www.ocps.net/recruitment-and-evaluation' }
             ],
             tags: ['Hiring', 'Jobs', 'Teacher Recruitment', 'Evaluation', 'Apply'],
@@ -747,10 +748,13 @@ const CALL_TREE = {
             icon: 'fa-gavel',
             description: 'Professional Standards and HR Compliance investigates employee misconduct, ensures compliance with employment regulations, and manages disciplinary processes for OCPS staff.',
             contacts: [
-              { role: 'Main Line', info: '407-317-3200', type: 'phone' },
-              { role: 'Website', info: 'ocps.net/professional-standards', type: 'link', url: 'https://www.ocps.net/professional-standards-and-hr-compliance' }
+              { role: 'Professional Standards', info: '407-317-3200 Ext. 2003239', type: 'phone' },
+              { role: 'HR Compliance', info: '407-317-3200 Ext. 2002520', type: 'phone' },
+              { role: 'FMLA', info: '407-317-3200 Ext 2003652', type: 'phone' },
+              { role: 'Fingerprint and Badging', info: '407-317-3200 Ext. 2026101', type: 'phone' },
+              { role: 'Website', info: 'ocps.net/professional-standards', type: 'link', url: 'https://www.ocps.net/professional-standards-and-hr-compl' }
             ],
-            tags: ['Misconduct', 'Investigation', 'Compliance', 'Discipline', 'Employee Conduct'],
+            tags: ['Misconduct', 'Investigation', 'Compliance', 'Discipline', 'Employee Conduct', 'Fingerprint', 'badging'],
             relatedDepts: ['Human Resources', 'Legal Services', 'Recruitment and Evaluation']
           }
         },
@@ -787,8 +791,8 @@ const CALL_TREE = {
             icon: 'fa-star',
             description: 'Leadership Development provides job-embedded learning opportunities and formal programs that enhance leadership capacity for aspiring and current administrators across OCPS.',
             contacts: [
-              { role: 'Main Line', info: '407-317-3200', type: 'phone' },
-              { role: 'Website', info: 'ocps.net/leadershipdevelopment', type: 'link', url: 'https://www.ocps.net/leadershipdevelopment' }
+              { role: 'Main Line', info: '407-317-3436', type: 'phone' },
+              { role: 'Website', info: 'ocps.net/leadershipdevelopment', type: 'link', url: 'https://www.ocps.net/151327_3' }
             ],
             tags: ['Leadership', 'Professional Development', 'Principals', 'Admin Training'],
             relatedDepts: ['Human Resources', 'Curriculum and Digital Learning', 'Recruitment and Evaluation']
@@ -797,9 +801,7 @@ const CALL_TREE = {
       ]
     },
 
-    /* ══════════════════════════════════════
        6. FINANCE & BUSINESS
-    ══════════════════════════════════════ */
     {
       id: 'finance-business',
       label: 'Finance & Business Operations',
@@ -849,7 +851,7 @@ const CALL_TREE = {
             icon: 'fa-file-invoice-dollar',
             description: 'Accounts Payable processes vendor payments, purchase orders, invoices, and employee reimbursements for Orange County Public Schools.',
             contacts: [
-              { role: 'Main Line', info: '407-317-3200', type: 'phone' },
+              { role: 'Main Line', info: '407-317-3246', type: 'phone' },
               { role: 'Website', info: 'ocps.net/accounts-payable', type: 'link', url: 'https://www.ocps.net/accounts-payable' }
             ],
             tags: ['Invoices', 'Vendors', 'Payments', 'Reimbursements', 'Purchase Orders'],
@@ -869,7 +871,7 @@ const CALL_TREE = {
             icon: 'fa-chart-pie',
             description: 'The Budget department develops and manages the district\'s annual operating budget, school allocations, and provides financial planning support.',
             contacts: [
-              { role: 'Main Line', info: '407-317-3200', type: 'phone' },
+              { role: 'Main Line', info: '407-317-3268', type: 'phone' },
               { role: 'Website', info: 'ocps.net/budget', type: 'link', url: 'https://www.ocps.net/budget' }
             ],
             tags: ['Budget', 'Allocations', 'Fiscal Year', 'Financial Planning'],
@@ -889,8 +891,8 @@ const CALL_TREE = {
             icon: 'fa-landmark',
             description: 'The Finance department provides governmental accounting, financial reporting, and fiscal services. It also oversees Title I federal program financial compliance.',
             contacts: [
-              { role: 'Chief Financial Officer', info: 'Doreen Concolino — 407-317-3200', type: 'person' },
-              { role: 'Main Line', info: '407-317-3200', type: 'phone' }
+              { role: 'Chief Financial Officer', info: 'Doreen Concolino â€” 407-317-3456', type: 'person' },
+              { role: 'SR. Specialist', info: 'Lisa Antonia â€” 407-317-3200 Ext. 2003456', type: 'person' }
             ],
             tags: ['Finance', 'Accounting', 'Financial Reports', 'Audit', 'Title I Finance'],
             relatedDepts: ['Budget', 'Accounts Payable', 'Grants', 'Internal Audit']
@@ -909,7 +911,7 @@ const CALL_TREE = {
             icon: 'fa-shopping-cart',
             description: 'Procurement Services manages purchasing contracts, competitive bids, vendor qualification, and procurement compliance for the district.',
             contacts: [
-              { role: 'Main Line', info: '407-317-3200', type: 'phone' },
+              { role: 'Main Line', info: '407-317-3988', type: 'phone' },
               { role: 'Website', info: 'ocps.net/procurement', type: 'link', url: 'https://www.ocps.net/procurement-services' }
             ],
             tags: ['Purchasing', 'Contracts', 'Vendors', 'Bids', 'RFP'],
@@ -929,7 +931,7 @@ const CALL_TREE = {
             icon: 'fa-hand-holding-usd',
             description: 'The Grants department manages the district\'s competitive and formula grant applications, reporting requirements, fiscal compliance, and grant development.',
             contacts: [
-              { role: 'Main Line', info: '407-317-3200', type: 'phone' },
+              { role: 'Main Line', info: '407-317-3340', type: 'phone' },
               { role: 'Website', info: 'ocps.net/grants', type: 'link', url: 'https://www.ocps.net/grants' }
             ],
             tags: ['Grants', 'Federal Funding', 'Compliance', 'Title I', 'Applications'],
@@ -959,9 +961,7 @@ const CALL_TREE = {
       ]
     },
 
-    /* ══════════════════════════════════════
        7. FACILITIES, OPERATIONS & TRANSPORTATION
-    ══════════════════════════════════════ */
     {
       id: 'facilities-ops',
       label: 'Facilities, Operations & Transportation',
@@ -1006,8 +1006,7 @@ const CALL_TREE = {
             icon: 'fa-tools',
             description: 'Facilities oversees the construction, renovation, maintenance, and operations of all OCPS school buildings and district properties, managed by the Chief Facilities Officer.',
             contacts: [
-              { role: 'Chief Facilities Officer', info: 'Rory Salimbene — 407-317-3200', type: 'person' },
-              { role: 'Main Line', info: '407-317-3200', type: 'phone' },
+              { role: 'Contact Info', info: 'See Website', type: 'text' },
               { role: 'Website', info: 'ocps.net/facilities', type: 'link', url: 'https://www.ocps.net/facilities' }
             ],
             tags: ['Construction', 'Maintenance', 'Buildings', 'Renovation', 'Repairs'],
@@ -1027,7 +1026,7 @@ const CALL_TREE = {
             icon: 'fa-bus',
             description: 'Transportation Services manages all school bus routes, driver scheduling, bus stop assignments, student eligibility for transportation, and related logistics for OCPS.',
             contacts: [
-              { role: 'Main Line', info: '407-317-3200', type: 'phone' },
+              { role: 'Main Line', info: '407-317-3800', type: 'phone' },
               { role: 'Website', info: 'ocps.net/transportation', type: 'link', url: 'https://www.ocps.net/transportation-services' }
             ],
             tags: ['Bus', 'Routes', 'Transportation', 'Bus Stop', 'Eligibility'],
@@ -1047,7 +1046,7 @@ const CALL_TREE = {
             icon: 'fa-utensils',
             description: 'Food and Nutrition Services manages school cafeteria programs, including free and reduced-price meal applications, menu planning, and nutrition compliance.',
             contacts: [
-              { role: 'Main Line', info: '407-317-3200', type: 'phone' },
+              { role: 'Main Line', info: '407-317-3110', type: 'phone' },
               { role: 'Website', info: 'ocps.net/food-nutrition', type: 'link', url: 'https://www.ocps.net/food-and-nutrition-services' }
             ],
             tags: ['School Meals', 'Free Lunch', 'Reduced Price', 'Cafeteria', 'Menus'],
@@ -1067,7 +1066,7 @@ const CALL_TREE = {
             icon: 'fa-map',
             description: 'Real Estate Management handles the acquisition, disposal, leasing, and management of district-owned and leased properties.',
             contacts: [
-              { role: 'Main Line', info: '407-317-3200', type: 'phone' },
+              { role: 'Main Line', info: 'See Website', type: 'text' },
               { role: 'Website', info: 'ocps.net/real-estate', type: 'link', url: 'https://www.ocps.net/real-estate-management' }
             ],
             tags: ['Property', 'Lease', 'Land', 'Rentals', 'Facilities Use'],
@@ -1077,9 +1076,7 @@ const CALL_TREE = {
       ]
     },
 
-    /* ══════════════════════════════════════
        8. TECHNOLOGY & INFORMATION
-    ══════════════════════════════════════ */
     {
       id: 'technology',
       label: 'Technology & Information Systems',
@@ -1119,8 +1116,8 @@ const CALL_TREE = {
             icon: 'fa-desktop',
             description: 'Information Technology Services manages the district\'s technology infrastructure, device programs, network connectivity, help desk support, and instructional technology under the Chief Information Officer.',
             contacts: [
-              { role: 'Chief Information Officer', info: 'Maurice Draggon — 407-317-3200', type: 'person' },
-              { role: 'Main Line', info: '407-317-3200', type: 'phone' },
+              { role: 'ITS Department', info: '407 317-3915', type: 'phone' },
+              { role: 'Employee Helpdesk', info: '407-317-3375', type: 'phone' },
               { role: 'Website', info: 'ocps.net/its', type: 'link', url: 'https://www.ocps.net/information-technology-services' }
             ],
             tags: ['IT', 'Technology', 'Devices', 'Network', 'Help Desk', 'Chromebooks'],
@@ -1149,7 +1146,7 @@ const CALL_TREE = {
                 icon: 'fa-microscope',
                 description: 'The Research department supports evidence-based decision making by conducting and reviewing research studies, managing data requests, and supporting district partners with approved research protocols.',
                 contacts: [
-                  { role: 'Main Line', info: '407-317-3200', type: 'phone' },
+                  { role: 'Main Line', info: '407-317-3406', type: 'phone' },
                   { role: 'Website', info: 'ocps.net/research', type: 'link', url: 'https://www.ocps.net/research' }
                 ],
                 tags: ['Research', 'Data Requests', 'Studies', 'IRB', 'Analysis'],
@@ -1169,8 +1166,7 @@ const CALL_TREE = {
                 icon: 'fa-compass',
                 description: 'Research, Measurement and Strategy (RMS) oversees the district\'s strategic plan, performance measurement, and research partnerships under the Chief Strategy Officer.',
                 contacts: [
-                  { role: 'Chief Strategy Officer', info: 'Dr. Harold Border — 407-317-3200', type: 'person' },
-                  { role: 'Main Line', info: '407-317-3200', type: 'phone' }
+                  { role: 'Executive Assistant', info: 'Miriam Patton â€” 407-317-3214', type: 'person' },
                 ],
                 tags: ['Strategy', 'Measurement', 'Strategic Plan', 'KPIs', 'Performance'],
                 relatedDepts: ['Research', 'Accountability', 'Assessment']
@@ -1181,9 +1177,7 @@ const CALL_TREE = {
       ]
     },
 
-    /* ══════════════════════════════════════
        9. COMMUNITY, COMMUNICATIONS & LEGAL
-    ══════════════════════════════════════ */
     {
       id: 'community-comms',
       label: 'Community, Communications & Legal',
@@ -1247,8 +1241,7 @@ const CALL_TREE = {
                 icon: 'fa-newspaper',
                 description: 'Media Relations is the official point of contact for all press and journalist inquiries about Orange County Public Schools.',
                 contacts: [
-                  { role: 'Chief Communications Officer', info: 'Scott Howat — 407-317-3200', type: 'person' },
-                  { role: 'Main Line', info: '407-317-3200', type: 'phone' },
+                  { role: 'Main Line', info: '407-317-3458', type: 'phone' },
                   { role: 'Website', info: 'ocps.net/media-relations', type: 'link', url: 'https://www.ocps.net/media-relations' }
                 ],
                 tags: ['Press', 'Media', 'Journalist', 'News', 'PR'],
@@ -1268,8 +1261,8 @@ const CALL_TREE = {
                 icon: 'fa-envelope-open-text',
                 description: 'The Communications department manages district-wide communications, newsletters, website content, social media, and internal and external messaging.',
                 contacts: [
-                  { role: 'Chief Communications Officer', info: 'Scott Howat — 407-317-3200', type: 'person' },
-                  { role: 'Main Line', info: '407-317-3200', type: 'phone' }
+                  { role: 'Main Line', info: '407-317-3494', type: 'phone' }
+                  { role: 'Website', info: 'ocps.net/communications', type: 'link', url: 'https://www.ocps.net/communications-home' }
                 ],
                 tags: ['Communications', 'Newsletter', 'Website', 'Social Media', 'Messaging'],
                 relatedDepts: ['Media Relations', 'Public Relations', 'Community Outreach']
@@ -1288,7 +1281,8 @@ const CALL_TREE = {
                 icon: 'fa-ad',
                 description: 'Advertising Sales manages district advertising partnerships and programs.',
                 contacts: [
-                  { role: 'Main Line', info: '407-317-3200', type: 'phone' }
+                  { role: 'Main Line', info: '407-317-3294', type: 'phone' }
+                  { role: 'Website', info: 'ocps.net/advertising', type: 'link', url: 'https://www.ocps.net/advertising-sales-home' }
                 ],
                 tags: ['Advertising', 'Sponsorship', 'Partnerships'],
                 relatedDepts: ['Communications', 'Foundation for OCPS']
@@ -1318,7 +1312,7 @@ const CALL_TREE = {
                 icon: 'fa-hands',
                 description: 'Community Outreach builds partnerships between OCPS and local organizations, businesses, and community stakeholders to support students and schools.',
                 contacts: [
-                  { role: 'Main Line', info: '407-317-3200', type: 'phone' },
+                  { role: 'Main Line', info: '407-317-3323', type: 'phone' },
                   { role: 'Website', info: 'ocps.net/community-outreach', type: 'link', url: 'https://www.ocps.net/community-outreach' }
                 ],
                 tags: ['Community', 'Partnerships', 'Outreach', 'Volunteers'],
@@ -1338,8 +1332,8 @@ const CALL_TREE = {
                 icon: 'fa-home',
                 description: 'Family Engagement and Digital Outreach supports family involvement in education and manages digital communication channels for engaging parents and guardians.',
                 contacts: [
-                  { role: 'Main Line', info: '407-317-3200', type: 'phone' },
-                  { role: 'Website', info: 'ocps.net/family-engagement', type: 'link', url: 'https://www.ocps.net/family-engagement-and-digital-outreach' }
+                  { role: 'Main Line', info: '4407-317-3300', type: 'phone' },
+                  { role: 'Website', info: 'ocps.net/family-engagement', type: 'link', url: 'https://www.ocps.net/family-engagement-and-digital-outre' }
                 ],
                 tags: ['Family', 'Parents', 'Engagement', 'Digital', 'ParentSquare'],
                 relatedDepts: ['Community Outreach', 'Multilingual Services']
@@ -1369,8 +1363,8 @@ const CALL_TREE = {
                 icon: 'fa-gavel',
                 description: 'Legal Services provides legal counsel to the district, manages litigation, reviews contracts, and handles labor relations matters under the General Counsel.',
                 contacts: [
-                  { role: 'General Counsel', info: 'John Palmerini — 407-317-3200', type: 'person' },
-                  { role: 'Main Line', info: '407-317-3200', type: 'phone' }
+                  { role: 'Main Line', info: '407-317-3411', type: 'phone' },
+                  { role: 'Fax', info: '407-317-3348', type: 'phone' }
                 ],
                 tags: ['Legal', 'Litigation', 'Contracts', 'Labor Relations', 'Counsel'],
                 relatedDepts: ['Professional Standards and HR Compliance', 'Risk Management', 'School Board Services']
@@ -1389,9 +1383,9 @@ const CALL_TREE = {
                 icon: 'fa-universal-access',
                 description: 'For Title IX, EEO, ADA, and Section 504 compliance matters, contact the designated OCPS compliance officers at the Ronald Blocker Educational Leadership Center.',
                 contacts: [
-                  { role: 'EEO Officer & Title IX Coordinator', info: 'Keshara Cowans — 407-317-3200', type: 'person' },
-                  { role: 'ADA Coordinator', info: 'Jay Cardinali — 407-317-3200', type: 'person' },
-                  { role: 'Section 504 Coordinator', info: 'Tajuana Lee-Wenze — 407-317-3200', type: 'person' }
+                  { role: 'EEO Officer & Title IX Coordinator', info: 'Keshara Cowans â€” 407-317-3200 Ext. 2002921', type: 'person' },
+                  { role: 'ADA Coordinator', info: 'Jay Cardinali â€” 407-317-3200 Ext. 2002923', type: 'person' },
+                  { role: 'Section 504 Sr. Director', info: 'Tajuana Lee-Wenze â€” 407-317-3200 Ext. 2032688', type: 'person' }
                 ],
                 tags: ['Title IX', 'EEO', 'ADA', 'Section 504', 'Discrimination', 'Compliance'],
                 relatedDepts: ['Legal Services', 'Human Resources', 'Professional Standards and HR Compliance']
@@ -1421,7 +1415,7 @@ const CALL_TREE = {
                 icon: 'fa-chalkboard-teacher',
                 description: 'School Board Services supports the elected School Board with meeting logistics, agendas, minutes, public records requests, and board policy management.',
                 contacts: [
-                  { role: 'Deputy Superintendent', info: 'Bridget Williams — 407-317-3200', type: 'person' },
+                  { role: 'Deputy Superintendent', info: 'Bridget Williams â€” 407-317-3200 Ext 2002904', type: 'person' },
                   { role: 'Main Line', info: '407-317-3200', type: 'phone' }
                 ],
                 tags: ['School Board', 'Meetings', 'Policy', 'Public Records', 'Agendas'],
@@ -1441,7 +1435,7 @@ const CALL_TREE = {
                 icon: 'fa-flag',
                 description: 'Government Relations manages OCPS\'s relationships with federal, state, and local government entities, monitors legislation, and advocates for district priorities.',
                 contacts: [
-                  { role: 'Main Line', info: '407-317-3200', type: 'phone' },
+                  { role: 'Main Line', info: 'Marquise McMiller - 407-317-3200 Ext. 2002966', type: 'person' },
                   { role: 'Website', info: 'ocps.net/government-relations', type: 'link', url: 'https://www.ocps.net/government-relations' }
                 ],
                 tags: ['Legislative', 'Government', 'Advocacy', 'Lobbying', 'Policy'],
@@ -1463,7 +1457,7 @@ const CALL_TREE = {
             icon: 'fa-hand-holding-heart',
             description: 'The Foundation for OCPS is a nonprofit organization that raises private funds to support scholarships, innovative classroom programs, and community giving for OCPS students and teachers.',
             contacts: [
-              { role: 'Chief Communications Officer', info: 'Scott Howat (Oversees Foundation) — 407-317-3200', type: 'person' },
+              { role: 'Mainline', info: '407-317-3261', type: 'phone' },
               { role: 'Website', info: 'ocps.net/foundation', type: 'link', url: 'https://www.ocps.net/foundation-for-ocps' }
             ],
             tags: ['Foundation', 'Scholarships', 'Donations', 'Fundraising', 'Grants'],
@@ -1473,9 +1467,7 @@ const CALL_TREE = {
       ]
     },
 
-    /* ══════════════════════════════════════
        10. FEDERAL PROGRAMS & TITLE I
-    ══════════════════════════════════════ */
     {
       id: 'federal',
       label: 'Federal Programs & Funding',
@@ -1510,7 +1502,7 @@ const CALL_TREE = {
             icon: 'fa-flag-usa',
             description: 'Federal Programs manages Title I and other federally funded educational programs, ensuring compliance with federal regulations and maximizing resources for high-need schools.',
             contacts: [
-              { role: 'Main Line', info: '407-317-3200', type: 'phone' },
+              { role: 'Main Line', info: '407-317-3485', type: 'phone' },
               { role: 'Website', info: 'ocps.net/federal-programs', type: 'link', url: 'https://www.ocps.net/federal-programs' }
             ],
             tags: ['Title I', 'Federal', 'Funding', 'Compliance', 'ESSA'],
@@ -1530,7 +1522,7 @@ const CALL_TREE = {
             icon: 'fa-clipboard-check',
             description: 'Evaluation Systems manages teacher and administrator performance evaluation systems, including IPEGS (Instructional Personnel Evaluation and Growth System) and related protocols.',
             contacts: [
-              { role: 'Main Line', info: '407-317-3200', type: 'phone' },
+              { role: 'Email', info: 'EvaluationSystems@ocps.', type: 'email' },
               { role: 'Website', info: 'ocps.net/evaluation-systems', type: 'link', url: 'https://www.ocps.net/evaluation-systems' }
             ],
             tags: ['IPEGS', 'Teacher Evaluation', 'Administrator Evaluation', 'Performance'],
@@ -1543,7 +1535,7 @@ const CALL_TREE = {
   ]
 };
 
-// ── Flat lookup for all leaf departments (search index) ──────
+Flat lookup for all leaf departments (search index)
 function buildSearchIndex(node, path = []) {
   const results = [];
   if (node.result) {
