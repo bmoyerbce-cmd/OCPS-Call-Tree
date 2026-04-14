@@ -238,7 +238,7 @@ const CALL_TREE =
         {
           label: 'Early Childhood / VPK',
           desc: 'Voluntary Pre-Kindergarten and early learning programs',
-          url: 'https://www.ocps.net/early-childhood-program'
+          url: 'https://www.ocps.net/early-childhood'
         },
         {
           label: 'Access, Equity & Opportunity',
@@ -444,7 +444,7 @@ const CALL_TREE =
                 role: 'Website',
                 info: 'ocps.net/curriculum',
                 type: 'link',
-                url: 'https://www.ocps.net/curriculum-and-digital-learning-home'
+                url: 'https://www.ocps.net/curriculum-and-digital-learning-hom'
               }
             ],
             tags: ['Curriculum', 'Instruction', 'Standards', 'Digital Learning', 'Textbooks'],
@@ -623,7 +623,7 @@ const CALL_TREE =
         {
           label: 'Environmental & Sustainability',
           desc: 'Environmental compliance and facility health standards',
-          url: 'https://www.ocps.net/environmental-compliance-sustainability'
+          url: 'https://www.ocps.net/environmental-compliance-sustaina-2'
         },
         {
           label: 'Risk Management / Insurance',
@@ -732,7 +732,7 @@ const CALL_TREE =
                 role: 'Website',
                 info: 'ocps.net/environmental-compliance',
                 type: 'link',
-                url: 'https://www.ocps.net/environmental-compliance-sustainability'
+                url: 'https://www.ocps.net/environmental-compliance-sustaina-2'
               }
             ],
             tags: ['Environment', 'Sustainability', 'Compliance', 'Facilities'],
@@ -792,7 +792,7 @@ const CALL_TREE =
         {
           label: 'Employee Conduct / Misconduct',
           desc: 'Professional standards, investigations, and compliance',
-          url: 'https://www.ocps.net/professional-standards-and-hr-compliance'
+          url: 'ocps.net/professional-standards-and-hr-compl'
         },
         {
           label: 'Retirement & FRS',
@@ -882,7 +882,7 @@ const CALL_TREE =
                 role: 'Website',
                 info: 'ocps.net/professional-standards',
                 type: 'link',
-                url: 'https://www.ocps.net/professional-standards-and-hr-compliance'
+                url: 'ocps.net/professional-standards-and-hr-compl'
               }
             ],
             tags: ['Misconduct', 'Investigation', 'Compliance', 'Discipline', 'Employee Conduct', 'Fingerprint', 'Badging'],
@@ -1411,7 +1411,7 @@ const CALL_TREE =
         {
           label: 'Family Engagement',
           desc: 'Family involvement, digital communications, and ParentSquare',
-          url: 'https://www.ocps.net/family-engagement-and-digital-outreach'
+          url: 'https://www.ocps.net/family-engagement-and-digital-outre'
         },
         {
           label: 'Legal / EEO / Title IX / ADA / 504',
@@ -1572,7 +1572,7 @@ const CALL_TREE =
                     role: 'Website',
                     info: 'ocps.net/family-engagement',
                     type: 'link',
-                    url: 'https://www.ocps.net/family-engagement-and-digital-outreach'
+                    url: 'https://www.ocps.net/family-engagement-and-digital-outre'
                   }
                 ],
                 tags: ['Family', 'Parents', 'Engagement', 'Digital', 'ParentSquare'],
