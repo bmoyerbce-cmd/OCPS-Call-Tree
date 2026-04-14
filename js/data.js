@@ -4,7 +4,7 @@
  * Each node: { id, label, desc, icon, accent, iconBg, iconColor, children? | result? }
  */
 
-const CALL_TREE = 
+const CALL_TREE = {
   id: 'root',
   label: "Thank you for calling Orange County Public Schools, my name is ___ I'll be your operator today",
   subtitle:
@@ -792,7 +792,7 @@ const CALL_TREE =
         {
           label: 'Employee Conduct / Misconduct',
           desc: 'Professional standards, investigations, and compliance',
-          url: 'ocps.net/professional-standards-and-hr-compl'
+          url: 'https://ocps.net/professional-standards-and-hr-compl'
         },
         {
           label: 'Retirement & FRS',
@@ -882,7 +882,7 @@ const CALL_TREE =
                 role: 'Website',
                 info: 'ocps.net/professional-standards',
                 type: 'link',
-                url: 'ocps.net/professional-standards-and-hr-compl'
+                url: 'https://ocps.net/professional-standards-and-hr-compl'
               }
             ],
             tags: ['Misconduct', 'Investigation', 'Compliance', 'Discipline', 'Employee Conduct', 'Fingerprint', 'Badging'],
