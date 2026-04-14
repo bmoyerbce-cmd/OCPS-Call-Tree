@@ -4,7 +4,7 @@
  * Each node: { id, label, desc, icon, accent, iconBg, iconColor, children? | result? }
  */
 
-const CALL_TREE = 
+const CALL_TREE = {
   id: 'root',
   label: "Thank you for calling Orange County Public Schools, my name is ___ I'll be your operator today",
   subtitle:
